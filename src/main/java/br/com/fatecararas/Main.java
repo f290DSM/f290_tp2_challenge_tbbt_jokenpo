@@ -1,5 +1,7 @@
 package br.com.fatecararas;
 
+import br.com.fatecararas.domain.Tipo;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -71,5 +73,6 @@ public class Main {
         }
 
         in.close();
+
     }
 }
