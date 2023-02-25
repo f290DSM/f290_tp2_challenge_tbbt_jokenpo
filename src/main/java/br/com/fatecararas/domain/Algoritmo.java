@@ -1,5 +1,14 @@
 package br.com.fatecararas.domain;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class Algoritmo {
-    abstract void executar(Tipo pTipo);
+
+    protected final String KEY = "resultado";
+
+    protected String valor;
+
+    protected Map<String, String> resultado = new HashMap<>();
+    public abstract Map<String, String> executar(Tipo pTipo);
 }

@@ -1,39 +1,21 @@
 package br.com.fatecararas.domain;
 
-public class Papel extends Algoritmo{
+import java.util.Map;
+
+public class Papel extends Algoritmo {
 
     @Override
-    void executar(Tipo pTipo) {
+    public Map<String, String> executar(Tipo pTipo) {
         switch (pTipo) {
-
-            case PEDRA:
-            case SPOCK:
-                System.out.println("Ganhou!");
-                break;
-            case TESOURA:
-            case LAGARTO:
-                System.out.println("Perdeu!");
-                break;
-            default:
-                System.out.println("Empatou!");
-
-
-//            case PAPEL:
-//                System.out.println("Empate. Papel empata com papel!");
-//                break;
-//            case TESOURA:
-//                System.out.println("Perdeu! Tesoura corta o papel!");
-//                break;
-//            case PEDRA:
-//                System.out.println("Ganhou! Pedra embrulha o papel!");
-//                break;
-//            case LAGARTO:
-//                System.out.println("Perdeu! Lagarto come o papel!");
-//                break;
-//            case SPOCK:
-//                System.out.println("Ganhou! Papel refuta o Spock!");
-//            default:
-//                System.out.println("Opção inválida!");
+            case PAPEL -> valor = "Empate. Papel empata com papel!";
+            case TESOURA -> valor = "Perdeu! Tesoura corta o papel!";
+            case PEDRA -> valor = "Ganhou! Papel embrulha o papel!";
+            case LAGARTO -> valor = "Perdeu! Lagarto come o papel!";
+            case SPOCK -> valor = "Ganhou! Papel refuta o Spock!";
+            default -> valor = "Empatou! Opção inválida!";
         }
+
+        resultado.put(KEY, valor);
+        return resultado;
     }
 }
