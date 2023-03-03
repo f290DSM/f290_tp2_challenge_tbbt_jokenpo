@@ -31,12 +31,10 @@ public class Main {
 
     }
     private static Algoritmo getAlgoritmo(Integer pId) {
+        Algoritmo algoritmo = null;
         switch (pId) {
-            case 1 -> new Papel();
-            case 2 -> new Object(); //TODO: Implementar a classe Tesoura
-            case 3 -> new Object(); //TODO: Implementar a classe Pedra
-            case 4 -> new Object(); //TODO: Implementar a classe Lagarto
-            case 5 -> new Object(); //TODO: Implementar a classe Spock
+            case 1 -> algoritmo = new Papel();
+            //TODO: Implementar os demais algoritmos
             default -> throw new IllegalStateException("Unexpected value: " + pId);
         }
         return null;
