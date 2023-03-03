@@ -6,11 +6,9 @@ Para este desafio vocês deverão utilizar os conhecimentos adquiridos para reso
 
 Utilizem a linguagem de sua preferencia e o paradigma de programação ao qual esteja mais confortável.
 
-## Primeira resolução com Paradigma Estruturado
+## Segunda resolução com Paradigma Estruturado
 
-> No paradigma estruturado utilizamos apenas as estrututas básicas como sequenciação, controle, iteração e modularização. 
-
-Nesta resolução removemos os `Números Mágicos` para facilitar a legibilidade do código.
+Nesta resolução removemos os `Números Mágicos` e os trocamos por constantes para facilitar a legibilidade do código.
 
 ```java
 public class Main {
