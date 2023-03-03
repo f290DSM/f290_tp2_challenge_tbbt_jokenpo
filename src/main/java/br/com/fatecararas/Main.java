@@ -37,6 +37,6 @@ public class Main {
             //TODO: Implementar os demais algoritmos
             default -> throw new IllegalStateException("Unexpected value: " + pId);
         }
-        return null;
+        return algoritmo;
     }
 }
