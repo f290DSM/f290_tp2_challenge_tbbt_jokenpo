@@ -1,29 +1,3 @@
-```mermaid
-classDiagram
-    
-    
-    Context *--> Strategy
-    class Context{
-        - strategy
-        + setStrategy(strategy)
-        + play()
-    }
-    Client --> Context
-    
+# Desafio JoKenPo The Big Bang Theory
 
-    class Strategy {
-        <<interface>>
-        executar(Tipo tipo)
-    }
-
-    
-    class ConcreteStrategy {
-        executar(Tipo tipo)
-    }
-    Strategy <|..  ConcreteStrategy
-
-
-    ConcreteStrategy <.. Client
-    class Client
-    
-```
+![](https://i.imgur.com/p9MPH.png)
