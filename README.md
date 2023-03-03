@@ -66,7 +66,33 @@ Utilizando a herança com a utilização da classe base Algoritmo, poderemos gar
 
 # Step 3 - Implementação dos Algoritmos com as regras de negócio
 
-Neste ponto devemos implementar separadamente os algoritmos em suas respectivas classes, conforme o exemplo da classe Papel no trecho abaixo.
+## Classe base para os Algoritmos
+
+> Esta classe irá transmitir às classes herdeiras seus atributos e a interface para a implementação das regras de negócio.
+
+1. Crie classe abstrata Algoritmo no pacote `domain`.
+
+```java
+package br.com.fatecararas.domain;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public abstract class Algoritmo {
+
+    protected final String KEY = "resultado";
+
+    protected String valor;
+
+    protected Map<String, String> resultado = new HashMap<>();
+    public abstract Map<String, String> executar(Tipo pTipo);
+}
+
+```
+
+> Neste ponto devemos implementar separadamente os algoritmos em suas respectivas classes, conforme o exemplo da classe Papel no trecho abaixo.
+
+2. Crie as classes para e implemente os algoritmos individualmente.
 
 ```java
 package br.com.fatecararas.domain;
@@ -92,7 +118,7 @@ public class Papel extends Algoritmo {
 }
 ```
 
-> Cada classe deverá possuir sua p'ropria implementação.
+> Cada classe deverá possuir sua própria implementação.
 
 # Step 4 - Uso do Padrão Strateggy
 
